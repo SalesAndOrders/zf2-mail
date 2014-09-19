@@ -84,7 +84,7 @@
                 $htmlPart->type = 'text/html';
                 $body->setParts(array($htmlPart));
             } else {
-                $plainPart = new Mime\Part($html);
+                $plainPart = new Mime\Part($plain);
                 $plainPart->type = 'text/plain';
                 $body->setParts(array($plainPart));
             }
