@@ -18,6 +18,7 @@
         {
             $config = $locator->get('config');
             $emailConfig = $config['mail'];
+            $emailConfig['transport'] = isset($config['transport']) ? $config['transport'] : [];
 
             $renderer = $locator->get('viewrenderer');
             return new Service(new Config($emailConfig), $renderer);
