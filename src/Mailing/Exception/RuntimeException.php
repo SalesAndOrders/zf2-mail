@@ -1,10 +1,10 @@
 <?php
-    namespace Mailing\Exception;
+namespace Mailing\Exception;
 
-    /**
-     * Class RuntimeException
-     * @package Mailing\Exception
-     */
-    class RuntimeException extends \RuntimeException
-    {
-    }
+/**
+ * Class RuntimeException
+ * @package Mailing\Exception
+ */
+class RuntimeException extends \RuntimeException
+{
+}

@@ -1,26 +1,28 @@
 <?php
-    namespace Mailing;
+namespace Mailing;
 
-    use Zend\ServiceManager\FactoryInterface;
-    use Zend\ServiceManager\ServiceLocatorInterface;
+use Interop\Container\ContainerInterface;
+use Zend\ServiceManager\Factory\FactoryInterface;
 
+/**
+ * Class Factory
+ * @package Mailing\Service
+ */
+class Factory implements FactoryInterface
+{
     /**
-     * Class Factory
-     * @package Mailing\Service
+     * @param ContainerInterface $locator
+     * @param string $requestedName
+     * @param array|null $options
+     * @return Service|object
      */
-    class Factory implements FactoryInterface
+    public function __invoke(ContainerInterface $locator, $requestedName, array $options = null)
     {
-        /**
-         * @param ServiceLocatorInterface $locator
-         * @return Service
-         */
-        public function createService(ServiceLocatorInterface $locator)
-        {
-            $config = $locator->get('config');
-            $emailConfig = $config['mail'];
-            $emailConfig['transport'] = isset($config['transport']) ? $config['transport'] : [];
+        $config = $locator->get('config');
+        $emailConfig = $config['mail'];
+        $emailConfig['transport'] = isset($config['transport']) ? $config['transport'] : [];
 
-            $renderer = $locator->get('viewrenderer');
-            return new Service(new Config($emailConfig), $renderer);
-        }
+        $renderer = $locator->get('viewrenderer');
+        return new Service(new Config($emailConfig), $renderer);
     }
+}
