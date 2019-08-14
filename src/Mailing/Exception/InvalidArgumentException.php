@@ -1,10 +1,10 @@
 <?php
-    namespace Mailing\Exception;
+namespace Mailing\Exception;
 
-    /**
-     * Class InvalidArgumentException
-     * @package Mailing\Exception
-     */
-    class InvalidArgumentException extends \InvalidArgumentException
-    {
-    }
+/**
+ * Class InvalidArgumentException
+ * @package Mailing\Exception
+ */
+class InvalidArgumentException extends \InvalidArgumentException
+{
+}
