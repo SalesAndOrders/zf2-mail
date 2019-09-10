@@ -22,7 +22,7 @@ class Factory implements FactoryInterface
         $emailConfig = $config['mail'];
         $emailConfig['transport'] = isset($config['transport']) ? $config['transport'] : [];
 
-        $renderer = $locator->get('Zend\Mvc\Console\View\Renderer');
+        $renderer = $locator->get('ViewRenderer');
         return new Service(new Config($emailConfig), $renderer);
     }
 }
