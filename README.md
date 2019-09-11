@@ -1,4 +1,4 @@
-ZF-2 Mail
+ZF-3 Mail
 =======
 
 Introduction
@@ -10,7 +10,7 @@ html content. Furthermore, it provides the ability to specify layouts for both c
 Requirements
 ------------
 
-* [Zend Framework 2](https://github.com/zendframework/zf2) (latest master)
+* [Zend Framework 2](https://github.com/zendframework/zendframework) (latest master)
 
 Installation
 ------------
@@ -27,7 +27,7 @@ Installation
 
     ```json
     "require": {
-        "stijnkoopal/zf2-mail": "dev-master"
+        "SalesAndOrders/zf3-mail": "dev-master"
     }
     ```
 
