@@ -1,15 +1,15 @@
 {
-    "name": "stijnkoopal/zf2-mail",
+    "name": "SalesAndOrders/zf3-mail",
     "type": "library",
-    "description": "Zend Framework 2 module that provides a highly configurable mail service",
+    "description": "Zend Framework 3 module that provides a highly configurable mail service",
     "keywords": ["mail"],
-    "homepage": "https://github.com/stijnkoopal/zf2-mail",
+    "homepage": "https://github.com/SalesAndOrders/zf3-mail",
     "license": "MIT",
     "authors": [
         {
-            "name": "Stijn Koopal",
-            "email": "s.tijn.koop.al@gmail.com",
-            "homepage": "https://github.com/stijnkoopal/zf2-mail",
+            "name": "S&O Developers",
+            "email": "developers@salesandorders.com",
+            "homepage": "https://github.com/SalesAndOrders/zf3-mail",
             "role": "Developer"
         }
     ],
