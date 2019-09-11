@@ -10,7 +10,7 @@ html content. Furthermore, it provides the ability to specify layouts for both c
 Requirements
 ------------
 
-* [Zend Framework 2](https://github.com/zendframework/zendframework) (latest master)
+* [Zend Framework 3](https://github.com/zendframework/zendframework) (latest master)
 
 Installation
 ------------
