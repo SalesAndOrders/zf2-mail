@@ -1,5 +1,5 @@
 {
-    "name": "SalesAndOrders/zf2-mail",
+    "name": "salesandorders/zf2-mail",
     "type": "library",
     "description": "Zend Framework 2/3 module that provides a highly configurable mail service",
     "keywords": ["mail"],
