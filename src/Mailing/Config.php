@@ -125,7 +125,7 @@ class Config
     public function getSubject($emailAlias)
     {
         $email = $this->getEmailAlias($emailAlias);
-        if (isset($email['subject']) && !empty($this->translator)) {
+        if (isset($email['subject']) && $this->translator instanceof Translator) {
             return $this->translator->translate($email['subject']);
         } elseif (isset($email['subject'])) {
             return $email['subject'];
