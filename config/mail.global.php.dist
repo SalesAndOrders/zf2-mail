@@ -2,6 +2,7 @@
 
 return array(
     'mail' => array(
+        'translator' => "Application\Utils\Translator",
         'domains' => array(
             'default' => 'my-application.com'
         ),

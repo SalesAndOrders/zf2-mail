@@ -1,6 +1,7 @@
 <?php
 namespace Mailing;
 
+use Zend\I18n\Translator\Translator;
 use Zend\Mail as ZendMail;
 use Zend\Stdlib\ArrayUtils;
 
@@ -19,11 +20,19 @@ class Config
     protected $config;
 
     /**
-     * @param $config
+     * @var Translator|null
      */
-    public function __construct($config)
+    protected $translator;
+
+    /**
+     * Config constructor.
+     * @param $config
+     * @param Translator|null $translator
+     */
+    public function __construct($config, Translator $translator = null)
     {
         $this->setConfig($config);
+        $this->translator = $translator;
     }
 
     /**
@@ -116,10 +125,13 @@ class Config
     public function getSubject($emailAlias)
     {
         $email = $this->getEmailAlias($emailAlias);
-        if (isset($email['subject'])) {
+        if (isset($email['subject']) && !empty($this->translator)) {
+            return $this->translator->translate($email['subject']);
+        } elseif (isset($email['subject'])) {
             return $email['subject'];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
